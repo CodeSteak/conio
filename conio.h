@@ -2,6 +2,15 @@
 #ifndef _CONIO_H_
 #define _CONIO_H_
 
+#define getch _getch
+#define putch _putch
+#define kbhit _kbhit
+#define cputs _cputs
+#define ungetch _ungetch
+#define getche _getche
+#define putch _putch
+#define cputs _cputs
+
 #ifdef _WIN32
 #include <conio.h> //from window
 #endif
@@ -54,15 +63,6 @@ Any available keystrokes can be retrieved with getch or getche.
 int kbhit(void);
 int putch(int c);
 int ungetch(int ch);
-#else
-#define getch _getch
-#define putch _putch
-#define kbhit _kbhit
-#define cputs _cputs
-#define ungetch _ungetch
-#define getche _getche
-#define putch _putch
-#define cputs _cputs
 #endif
 
 
@@ -77,4 +77,3 @@ void textcolor(int newcolor);
 #endif  /* __cplusplus */
 
 #endif //CONIO_H
-
